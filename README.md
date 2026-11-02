@@ -83,8 +83,6 @@ nama-folder-proyek/
 | `profil.html` | Profil | Nama contoh, NIM contoh, program studi, dalam bentuk daftar |
 | `tentang.html` | Tentang kami | Profil singkat kelompok dan tujuan aplikasi |
 
-> Daftar halaman ini mengikuti rancangan kelompok. Kalau di Figma ada halaman lain, tambahkan di sini dan di daftar folder.
-
 ### Aturan yang berlaku di semua halaman
 
 - Setiap halaman memakai kerangka HTML5 yang sama (lihat [Level 1](#level-1-kerangka-dasar)).
@@ -143,8 +141,8 @@ Singkat, jelas, dan menyebut apa yang dikerjakan.
 | Masalah | Yang dilakukan |
 |---|---|
 | Push ditolak | Pull dulu, lalu push lagi |
-| Muncul tulisan `conflict` | Berhenti, jangan klik sembarangan, hubungi ketua |
-| Salah commit atau salah ubah file | Tenang, semua riwayat tercatat dan bisa dikembalikan. Tanya ketua |
+| Muncul tulisan `conflict` | Berhenti, jangan klik sembarangan |
+| Salah commit atau salah ubah file | Tenang, semua riwayat tercatat dan bisa dikembalikan. |
 
 ---
 
@@ -312,7 +310,7 @@ Dipakai di halaman Reservasi, Riwayat, dan Jadwal.
 1. Gunakan **huruf kecil** untuk nama tag, atribut, dan nama file.
 2. Setiap tag yang dibuka harus ditutup, kecuali `img` dan `br`.
 3. **Rapikan indentasi**: isi di dalam sebuah tag digeser 2 spasi ke kanan, supaya mudah dibaca.
-4. Kasih **komentar** `<!-- ... -->` di bagian yang penting, terutama kalau temanmu perlu memahaminya.
+4. Kasih **komentar** `<!-- ... -->` di bagian yang penting, terutama kalau kurang paham.
 5. Nama `id` dan `name` pakai huruf kecil tanpa spasi, contoh: `tanggal-reservasi`.
 6. Jangan memakai data asli. Pakai nama, NIM, dan tanggal karangan.
 7. Jangan mengubah tampilan dengan trik tabel atau spasi kosong. CSS baru dipelajari nanti.
@@ -329,9 +327,7 @@ Dipakai di halaman Reservasi, Riwayat, dan Jadwal.
 | Gambar tidak tampil | Periksa lokasi file di `assets/images` dan penulisan `src` |
 | Tampilan berantakan setelah mengedit | Biasanya ada tag yang lupa ditutup. Cek pasangan tag pembuka dan penutup |
 | Push ditolak | Pull dulu, lalu push lagi |
-| Muncul tulisan `conflict` | Berhenti dan hubungi ketua |
-
-Kalau bingung, tanyakan di grup dan sertakan **screenshot** supaya cepat dibantu.
+| Muncul tulisan `conflict` | Berhenti dan cek bareng |
 
 ---
 
