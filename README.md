@@ -1,105 +1,162 @@
-# Web Akademik Mahasiswa Polije
+# Teras JTI: Aplikasi Reservasi Co-working Space
 
-Proyek kelompok mata kuliah Workshop Desain Aplikasi (TIF110809), Politeknik Negeri Jember.
+Proyek kelompok 4 "No Bug No Cry", mata kuliah Workshop Desain Aplikasi (TIF110809), Politeknik Negeri Jember.
 
-Kita membuat website akademik sederhana dengan HTML saja. Halamannya: Login, Dashboard, KRS, KHS, Jadwal, dan Profil. Desainnya mengikuti prototype Figma dari Minggu 10.
+Kita membuat website reservasi co-working space Teras JTI memakai **HTML saja** (belum ada CSS dan JavaScript). Tampilan dan isi halaman mengikuti prototype Figma hi-fi dari Minggu 10.
 
-PENTING: Semua data (nama, NIM, nilai, jadwal) adalah data karangan. Jangan memasukkan data pribadi yang asli.
+> **PENTING:** semua data (nama, NIM, tanggal, ruang) adalah data karangan. Jangan memasukkan data pribadi yang asli.
 
 ---
 
-## Isi Folder Proyek
+## Cara Memakai README Ini
+
+README ini adalah **kompas dan kamus** kalian saat ngoding atau memakai Git. Jangan dibaca sekali lalu ditinggal, buka lagi setiap kali bingung.
+
+| Kamu sedang... | Buka bagian |
+|---|---|
+| Baru mulai dan belum tahu harus ngapain? | [1. Kompas Kerja](#1-kompas-kerja) |
+| Bingung halaman apa saja yang harus dibuat? | [2. Peta Proyek](#2-peta-proyek) |
+| Mau pakai Git atau GitHub Desktop? | [3. Panduan Git](#3-panduan-git) |
+| Mau menulis kode HTML? | [4. Panduan HTML](#4-panduan-html) |
+| Mau menulis kode yang rapi dan seragam? | [5. Aturan Penulisan Kode](#5-aturan-penulisan-kode) |
+| Ada error atau hasil tidak sesuai? | [6. Masalah yang Sering Terjadi](#6-masalah-yang-sering-terjadi) |
+| Mau tahu arti sebuah istilah? | [7. Kamus Istilah](#7-kamus-istilah) |
+
+---
+
+## 1. Kompas Kerja
+
+Setiap kali mau bekerja, ikuti urutan ini:
+
+1. **Pull**: ambil perubahan terbaru dari teman.
+2. **Buka** file bagianmu di VS Code.
+3. **Tulis atau ubah** kodenya, lalu simpan dengan `Ctrl + S`.
+4. **Cek di browser**, lalu refresh dengan `F5`.
+5. **Commit** dengan pesan singkat.
+6. **Push**: kirim ke GitHub.
+
+Tiga aturan emas:
+
+- Pull dulu sebelum mulai, push setelah selesai.
+- Edit hanya file bagianmu. Kalau perlu mengubah file teman, kabari dia dulu.
+- Kalau ragu atau muncul tulisan `conflict`, berhenti dan tanya ketua. Jangan klik sembarangan.
+
+### Pembagian halaman
+
+| Anggota | Peran | Halaman yang dikerjakan |
+|---|---|---|
+| Farrel Ananta Firmansyah | Ketua | |
+| Deva Riski Anjani | Anggota | |
+| Achmad Solikhin (Lihin) | Anggota | |
+| Firsty Maylisha Putri | Anggota | |
+| Wildzan Suryabuana Jarot | Anggota | |
+
+*(Kolom halaman diisi bersama saat pembagian tugas.)*
+
+---
+
+## 2. Peta Proyek
+
+### Isi folder
 
 ```
-web-akademik-polije/
+nama-folder-proyek/
   index.html        Halaman Login
-  dashboard.html    Halaman Dashboard
-  krs.html          Kartu Rencana Studi
-  khs.html          Kartu Hasil Studi
-  jadwal.html       Jadwal Kuliah
-  profil.html       Profil Mahasiswa
+  dashboard.html    Halaman utama setelah login
+  reservasi.html    Form reservasi dan tabel ketersediaan
+  riwayat.html      Riwayat reservasi
+  jadwal.html       Jadwal dan ketersediaan Teras JTI
+  profil.html       Profil pengguna
+  tentang.html      Tentang kelompok kita
   assets/
-    images/         Tempat menyimpan logo dan gambar
+    images/         Logo dan gambar
   README.md         File yang sedang kamu baca
 ```
 
-Aturan nama file:
-- Pakai huruf kecil semua.
-- Jangan pakai spasi.
-- Akhiri dengan .html
+### Isi tiap halaman
 
-Contoh benar: jadwal.html
-Contoh salah: Jadwal Kuliah.HTML
+| File | Fungsi | Isi yang harus ada |
+|---|---|---|
+| `index.html` | Login | Judul, teks petunjuk, label dan input NIM, label dan input kata sandi, tombol Masuk, tautan bantuan |
+| `dashboard.html` | Beranda | Identitas aplikasi, salam untuk pengguna contoh, ringkasan reservasi, menu ke halaman lain |
+| `reservasi.html` | Membuat reservasi | Form pilih tanggal, jam, dan ruang, plus tabel ketersediaan ruang |
+| `riwayat.html` | Riwayat | Tabel dengan kolom kode, tanggal, ruang, status, keterangan |
+| `jadwal.html` | Jadwal | Tabel dengan kolom hari, jam, ruang, status ketersediaan |
+| `profil.html` | Profil | Nama contoh, NIM contoh, program studi, dalam bentuk daftar |
+| `tentang.html` | Tentang kami | Profil singkat kelompok dan tujuan aplikasi |
 
----
+> Daftar halaman ini mengikuti rancangan kelompok. Kalau di Figma ada halaman lain, tambahkan di sini dan di daftar folder.
 
-## Cara Mulai (untuk yang belum pernah coding)
+### Aturan yang berlaku di semua halaman
 
-### Langkah 1. Siapkan alat
+- Setiap halaman memakai kerangka HTML5 yang sama (lihat [Level 1](#level-1-kerangka-dasar)).
+- Menu navigasi **sama persis** di semua halaman, dan ada jalan kembali ke Dashboard.
+- Setiap `input` punya `label`, dan keduanya dihubungkan lewat `for` dan `id`.
+- Judul memakai `h1` sampai `h6` secara berurutan, jangan melompat.
+- Setiap gambar punya `alt`.
+- Nama file: huruf kecil, tanpa spasi, berakhiran `.html`. Contoh benar: `riwayat.html`. Contoh salah: `Riwayat Reservasi.HTML`.
 
-Kamu butuh tiga hal:
-1. Browser: Chrome, Firefox, atau Edge.
-2. Editor kode: Visual Studio Code (gratis), unduh di https://code.visualstudio.com
-3. Akun GitHub: daftar di https://github.com, lalu kirim username kamu ke ketua supaya diundang ke repo ini.
+### Alur yang akan didemokan
 
-### Langkah 2. Ambil proyek ke laptop
+Login, Dashboard, Reservasi / Riwayat / Jadwal / Profil, lalu kembali ke Dashboard.
 
-Cara paling mudah adalah memakai GitHub Desktop, jadi tidak perlu mengetik perintah apa pun.
-
-1. Pasang GitHub Desktop dari https://desktop.github.com lalu login.
-2. Klik menu File, lalu Clone repository.
-3. Pilih repo ini, lalu klik Clone.
-4. Klik tombol Open in Visual Studio Code.
-
-### Langkah 3. Edit file
-
-1. Buka file bagianmu di VS Code, misalnya krs.html.
-2. Tulis atau ubah kodenya.
-3. Simpan dengan menekan Ctrl + S.
-4. Buka file itu di browser dengan klik dua kali pada file di folder.
-5. Setiap habis mengubah sesuatu: simpan, lalu refresh browser dengan F5.
-
-### Langkah 4. Kirim hasil kerjamu ke GitHub
-
-Di GitHub Desktop:
-1. Perubahanmu akan muncul di daftar sebelah kiri.
-2. Tulis pesan singkat di kotak Summary, contoh: "Tambah tabel KRS".
-3. Klik Commit to main.
-4. Klik Push origin.
-
-### Langkah 5. Ambil hasil kerja teman
-
-Sebelum mulai bekerja, klik Fetch origin, lalu Pull origin. Dengan begitu file di laptopmu selalu yang terbaru.
-
-Aturan sederhana yang harus diingat:
-- Pull dulu sebelum mulai bekerja.
-- Push setelah selesai bekerja.
-- Edit hanya file bagianmu sendiri supaya tidak bentrok dengan teman.
+Login belum berfungsi pada tahap ini. Tombol Masuk hanya tampilan.
 
 ---
 
-## Kamus Istilah
+## 3. Panduan Git
 
-| Istilah | Artinya |
-|---------|---------|
-| Repository (repo) | Folder proyek yang disimpan di GitHub |
-| Clone | Menyalin repo dari GitHub ke laptop |
-| Commit | Menyimpan perubahan lengkap dengan catatan singkat |
-| Push | Mengirim perubahan dari laptop ke GitHub |
-| Pull | Mengambil perubahan terbaru dari GitHub ke laptop |
-| HTML | Bahasa untuk menyusun kerangka halaman web |
-| Tag | Penanda HTML, contoh <p>. Biasanya ada pembuka dan penutup |
-| Atribut | Keterangan tambahan di dalam tag, contoh href="krs.html" |
+### Persiapan satu kali
+
+1. Buat akun di https://github.com, lalu kirim username-mu ke ketua supaya diundang ke repo.
+2. Pasang **GitHub Desktop** dari https://desktop.github.com, lalu login.
+3. Pasang **Visual Studio Code** dari https://code.visualstudio.com
+4. Di GitHub Desktop: menu **File**, **Clone repository**, pilih repo ini, klik **Clone**.
+5. Klik **Open in Visual Studio Code**.
+
+### Kerja sehari-hari (GitHub Desktop)
+
+| Tujuan | Yang diklik |
+|---|---|
+| Ambil perubahan teman | **Fetch origin**, lalu **Pull origin** |
+| Melihat apa yang kamu ubah | Daftar file di sebelah kiri |
+| Menyimpan perubahan | Tulis pesan di kotak **Summary**, lalu **Commit to main** |
+| Mengirim ke GitHub | **Push origin** |
+
+### Pesan commit yang baik
+
+Singkat, jelas, dan menyebut apa yang dikerjakan.
+
+- Bagus: `Tambah tabel riwayat reservasi`, `Perbaiki tautan menu di jadwal`
+- Kurang bagus: `update`, `fix`, `asdf`
+
+### Kalau lebih suka terminal
+
+| Tujuan | Perintah |
+|---|---|
+| Ambil perubahan terbaru | `git pull` |
+| Lihat file yang berubah | `git status` |
+| Siapkan semua perubahan | `git add .` |
+| Simpan perubahan | `git commit -m "pesan singkat"` |
+| Kirim ke GitHub | `git push` |
+
+### Kalau ada masalah di Git
+
+| Masalah | Yang dilakukan |
+|---|---|
+| Push ditolak | Pull dulu, lalu push lagi |
+| Muncul tulisan `conflict` | Berhenti, jangan klik sembarangan, hubungi ketua |
+| Salah commit atau salah ubah file | Tenang, semua riwayat tercatat dan bisa dikembalikan. Tanya ketua |
 
 ---
 
-## Belajar HTML Pelan-pelan
+## 4. Panduan HTML
 
-Pelajari satu level untuk satu sesi kerja. Setelah membaca, langsung praktikkan di halaman bagianmu.
+Pelajari satu level per sesi kerja, lalu langsung praktikkan di halaman bagianmu.
 
 ### Level 1. Kerangka dasar
 
-Setiap halaman HTML diawali dengan kerangka ini:
+Setiap halaman diawali dengan kerangka ini:
 
 ```html
 <!DOCTYPE html>
@@ -117,11 +174,10 @@ Setiap halaman HTML diawali dengan kerangka ini:
 </html>
 ```
 
-Penjelasan:
-- head berisi informasi tentang halaman. Isinya tidak tampil di layar.
-- body berisi isi halaman. Semua yang tampil di layar ada di sini.
-- title adalah tulisan yang muncul di tab browser.
-- Tulisan di antara tanda `<!--` dan `-->` adalah komentar. Browser tidak menampilkannya.
+- `head` berisi informasi tentang halaman dan tidak tampil di layar.
+- `body` berisi semua yang tampil di layar.
+- `title` adalah tulisan di tab browser.
+- Tulisan di antara `<!--` dan `-->` adalah komentar. Browser tidak menampilkannya, jadi pakai untuk catatan.
 
 ### Level 2. Teks, daftar, tautan, dan gambar
 
@@ -135,48 +191,50 @@ Penjelasan:
   <li>Poin dua</li>
 </ul>
 
-<a href="krs.html">Menuju halaman KRS</a>
+<a href="reservasi.html">Buat Reservasi</a>
 
-<img src="assets/images/logo.png" alt="Logo Polije">
+<img src="assets/images/logo.png" alt="Logo Teras JTI">
 ```
 
-Penjelasan:
-- h1 sampai h6 adalah judul. h1 yang paling besar dan paling penting.
-- p adalah paragraf.
-- ul adalah daftar berpoin, dan li adalah satu poin di dalamnya.
-- a adalah tautan. Alamat tujuan ditulis di href.
-- img adalah gambar. Isi alt adalah tulisan pengganti kalau gambar gagal tampil.
-
-Nama file pada href harus sama persis dengan nama file tujuan.
+- `h1` sampai `h6` adalah judul. `h1` paling besar dan paling penting, satu halaman cukup satu `h1`.
+- `ul` adalah daftar berpoin, `li` adalah satu poin di dalamnya. Untuk daftar bernomor pakai `ol`.
+- `a` adalah tautan, alamat tujuan ditulis di `href`.
+- `img` adalah gambar. `alt` adalah tulisan pengganti kalau gambar gagal tampil.
+- Nama file di `href` harus sama persis dengan nama file tujuan.
 
 ### Level 3. Struktur halaman
 
-Bagi halaman menjadi bagian-bagian yang jelas fungsinya:
+Bagi halaman menjadi bagian yang jelas fungsinya:
 
 ```html
 <header>Kepala halaman atau identitas aplikasi</header>
 <nav>Menu navigasi</nav>
-<main>Isi utama halaman</main>
+<main>
+  <section>Satu kelompok isi</section>
+</main>
 <footer>Bagian penutup</footer>
 ```
 
-Contoh menu navigasi:
+Menu navigasi untuk dipakai di semua halaman:
 
 ```html
 <nav>
   <ul>
     <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="krs.html">KRS</a></li>
-    <li><a href="khs.html">KHS</a></li>
+    <li><a href="reservasi.html">Reservasi</a></li>
+    <li><a href="riwayat.html">Riwayat</a></li>
     <li><a href="jadwal.html">Jadwal</a></li>
     <li><a href="profil.html">Profil</a></li>
+    <li><a href="tentang.html">Tentang</a></li>
   </ul>
 </nav>
 ```
 
-Salin menu ini dengan isi yang sama persis ke semua halaman supaya navigasinya seragam.
+Salin dengan isi yang sama persis ke semua halaman (kecuali Login) supaya navigasinya seragam.
 
-### Level 4. Formulir (untuk halaman Login)
+### Level 4. Formulir
+
+Dipakai di halaman Login dan Reservasi.
 
 ```html
 <form>
@@ -190,106 +248,120 @@ Salin menu ini dengan isi yang sama persis ke semua halaman supaya navigasinya s
 </form>
 ```
 
-Penjelasan:
-- label adalah tulisan keterangan untuk kolom isian.
-- input adalah kolom isian. type="password" membuat isian tertutup titik-titik.
-- Nilai for pada label harus sama dengan id pada input, supaya keduanya terhubung.
-- button adalah tombol.
+Pilihan dari daftar (misalnya memilih ruang di halaman Reservasi):
 
-Catatan: form ini belum berfungsi untuk login. Pada tahap ini kita hanya membuat tampilannya.
+```html
+<label for="ruang">Pilih Ruang</label>
+<select id="ruang" name="ruang">
+  <option value="meja-a">Meja A</option>
+  <option value="meja-b">Meja B</option>
+</select>
+```
 
-### Level 5. Tabel (untuk KRS, KHS, dan Jadwal)
+- `label` adalah keterangan untuk kolom isian.
+- Nilai `for` pada `label` harus sama dengan `id` pada `input`, supaya keduanya terhubung.
+- `type="password"` membuat isian tertutup titik-titik.
+- Form ini belum berfungsi. Pada tahap ini kita hanya membuat tampilannya.
+
+### Level 5. Tabel
+
+Dipakai di halaman Reservasi, Riwayat, dan Jadwal.
 
 ```html
 <table>
-  <caption>Daftar Mata Kuliah</caption>
+  <caption>Riwayat Reservasi</caption>
   <thead>
     <tr>
       <th>Kode</th>
-      <th>Mata Kuliah</th>
-      <th>SKS</th>
+      <th>Tanggal</th>
+      <th>Ruang</th>
+      <th>Status</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>TIF110809</td>
-      <td>Workshop Desain Aplikasi</td>
-      <td>2</td>
+      <td>RSV-001</td>
+      <td>10 November 2026</td>
+      <td>Meja A</td>
+      <td>Disetujui</td>
     </tr>
   </tbody>
 </table>
 ```
 
-Penjelasan:
-- table adalah tabelnya, dan caption adalah judul tabel.
-- thead adalah bagian kepala tabel, dan tbody adalah bagian isinya.
-- tr adalah satu baris.
-- th adalah judul kolom, dan td adalah isi satu kotak.
+- `caption` adalah judul tabel.
+- `thead` adalah kepala tabel, `tbody` adalah isinya.
+- `tr` adalah satu baris, `th` adalah judul kolom, `td` adalah satu kotak isi.
+- Pakai tabel hanya untuk data berbentuk baris dan kolom, bukan untuk mengatur letak seluruh halaman.
 
-Gunakan tabel hanya untuk data berbentuk baris dan kolom, bukan untuk mengatur letak seluruh halaman.
+### Level 6. Daftar identitas (untuk Profil)
 
----
+```html
+<dl>
+  <dt>Nama</dt>
+  <dd>Mahasiswa Contoh</dd>
+  <dt>NIM</dt>
+  <dd>E00000000</dd>
+</dl>
+```
 
-## Daftar Tugas Proyek
-
-Centang (ganti [ ] menjadi [x]) kalau sudah selesai.
-
-### Persiapan
-- [ ] Semua anggota punya akun GitHub dan sudah diundang
-- [ ] Semua anggota sudah clone repo dan bisa membuka di VS Code
-- [ ] Tabel anggota dan pembagian halaman sudah diisi
-- [ ] Setiap orang sudah mencoba commit dan push satu perubahan kecil
-
-### Acara 1. Kerangka proyek
-- [ ] index.html berisi kerangka HTML5 lengkap
-- [ ] Ada heading utama dan paragraf pengantar
-- [ ] File untuk semua halaman sudah dibuat
-- [ ] Lembar Kerja 1 dan 2 terisi
-
-### Acara 2. Login dan Dashboard
-- [ ] Login: label dan input NIM, label dan input password, tombol Masuk
-- [ ] Dashboard: header, nav, main, section, footer
-- [ ] Dashboard berisi salam, ringkasan data contoh, dan menu layanan
-- [ ] Lembar Kerja 3 dan 4 terisi
-
-### Acara 3. Halaman layanan akademik
-- [ ] krs.html: tabel dengan kolom kode, mata kuliah, SKS, kelas, status
-- [ ] khs.html: tabel dengan kolom kode, mata kuliah, SKS, nilai, keterangan, serta IPS dan IPK contoh
-- [ ] jadwal.html: tabel dengan kolom hari, waktu, mata kuliah, dosen, ruang
-- [ ] profil.html: identitas mahasiswa contoh
-- [ ] Lembar Kerja 5 dan 6 terisi
-
-### Acara 4. Penyambungan dan pengujian
-- [ ] Menu navigasi sama di semua halaman, dan ada tautan kembali ke Dashboard
-- [ ] Semua tautan sudah diklik dan tidak ada yang rusak
-- [ ] Heading, tabel, dan label sudah diperiksa
-- [ ] Hasil sudah dibandingkan dengan Figma, dan perbedaannya dicatat
-- [ ] Alur demo berjalan: Login, Dashboard, KRS/KHS/Jadwal/Profil, kembali ke Dashboard
-- [ ] Lembar Kerja 7, Hasil dan Pembahasan, serta Kesimpulan selesai
+`dl` adalah daftar deskripsi, `dt` adalah nama bagian, `dd` adalah isinya. Boleh juga memakai `ul` biasa.
 
 ---
 
-## Aturan Kerja Kelompok
+## 5. Aturan Penulisan Kode
 
-1. Pull dulu sebelum mulai, push setelah selesai.
-2. Edit hanya file bagianmu. Kalau perlu mengubah file milik teman, kabari dia dulu.
-3. Tulis pesan commit yang singkat dan jelas, contoh: "Tambah tabel jadwal" atau "Perbaiki tautan menu".
-4. Jangan unggah data pribadi yang asli, seperti NIM, nilai, atau password sungguhan.
-5. Kalau bingung atau ada error, tanyakan di grup dan sertakan screenshot.
-6. Salah itu wajar. Semua perubahan tercatat riwayatnya dan bisa dikembalikan.
+1. Gunakan **huruf kecil** untuk nama tag, atribut, dan nama file.
+2. Setiap tag yang dibuka harus ditutup, kecuali `img` dan `br`.
+3. **Rapikan indentasi**: isi di dalam sebuah tag digeser 2 spasi ke kanan, supaya mudah dibaca.
+4. Kasih **komentar** `<!-- ... -->` di bagian yang penting, terutama kalau temanmu perlu memahaminya.
+5. Nama `id` dan `name` pakai huruf kecil tanpa spasi, contoh: `tanggal-reservasi`.
+6. Jangan memakai data asli. Pakai nama, NIM, dan tanggal karangan.
+7. Jangan mengubah tampilan dengan trik tabel atau spasi kosong. CSS baru dipelajari nanti.
 
 ---
 
-## Masalah yang Sering Terjadi
+## 6. Masalah yang Sering Terjadi
 
 | Masalah | Penyebab dan cara mengatasi |
-|---------|-----------------------------|
-| Perubahan tidak muncul di browser | Kamu belum menyimpan (Ctrl + S) atau belum refresh (F5) |
-| Klik menu muncul "halaman tidak ditemukan" | Nama file di href tidak sama persis dengan nama file tujuan. Periksa huruf besar atau kecil dan akhiran .html |
-| Tulisan menjadi simbol aneh | Pastikan ada baris meta charset UTF-8 di bagian head |
-| Push ditolak | Lakukan Pull dulu, lalu Push lagi |
-| Muncul tulisan "conflict" | Berhenti dulu dan jangan klik sembarangan. Hubungi ketua untuk dibantu |
-| Gambar tidak tampil | Periksa lokasi file di assets/images dan penulisan src |
+|---|---|
+| Perubahan tidak muncul di browser | Belum disimpan (`Ctrl + S`) atau belum refresh (`F5`) |
+| Klik menu muncul "halaman tidak ditemukan" | Nama file di `href` tidak sama persis dengan nama file tujuan. Periksa huruf besar atau kecil dan akhiran `.html` |
+| Tulisan menjadi simbol aneh | Pastikan ada baris `<meta charset="UTF-8">` di bagian `head` |
+| Gambar tidak tampil | Periksa lokasi file di `assets/images` dan penulisan `src` |
+| Tampilan berantakan setelah mengedit | Biasanya ada tag yang lupa ditutup. Cek pasangan tag pembuka dan penutup |
+| Push ditolak | Pull dulu, lalu push lagi |
+| Muncul tulisan `conflict` | Berhenti dan hubungi ketua |
+
+Kalau bingung, tanyakan di grup dan sertakan **screenshot** supaya cepat dibantu.
+
+---
+
+## 7. Kamus Istilah
+
+### Istilah Git
+
+| Istilah | Artinya |
+|---|---|
+| Repository (repo) | Folder proyek yang disimpan di GitHub |
+| Clone | Menyalin repo dari GitHub ke laptop |
+| Commit | Menyimpan perubahan lengkap dengan catatan singkat |
+| Push | Mengirim perubahan dari laptop ke GitHub |
+| Pull | Mengambil perubahan terbaru dari GitHub ke laptop |
+| Fetch | Mengecek apakah ada perubahan baru di GitHub (belum mengambilnya) |
+| Conflict | Dua orang mengubah bagian yang sama, sehingga Git tidak tahu mana yang dipakai |
+
+### Istilah HTML
+
+| Istilah | Artinya |
+|---|---|
+| HTML | Bahasa untuk menyusun kerangka halaman web |
+| Tag | Penanda HTML, contoh `<p>`. Biasanya ada pembuka `<p>` dan penutup `</p>` |
+| Elemen | Satu tag lengkap beserta isinya |
+| Atribut | Keterangan tambahan di dalam tag, contoh `href="jadwal.html"` |
+| Semantik | Tag yang namanya menjelaskan fungsinya, contoh `header`, `nav`, `main`, `footer` |
+| Tautan relatif | Alamat tujuan yang ditulis berdasarkan lokasi file saat ini, contoh `href="jadwal.html"` |
+| Komentar | Catatan di kode yang tidak tampil di browser: `<!-- catatan -->` |
 
 ---
 
