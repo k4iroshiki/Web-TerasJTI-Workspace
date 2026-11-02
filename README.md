@@ -65,7 +65,8 @@ nama-folder-proyek/
   riwayat.html      Riwayat reservasi
   jadwal.html       Jadwal dan ketersediaan Teras JTI
   profil.html       Profil pengguna
-  tentang.html      Tentang kelompok kita
+  about/
+    tentang.html      Tentang kelompok kita
   assets/
     images/         Logo dan gambar
   README.md         File yang sedang kamu baca
