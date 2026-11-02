@@ -51,8 +51,6 @@ Tiga aturan emas:
 | Firsty Maylisha Putri | Anggota | |
 | Wildzan Suryabuana Jarot | Anggota | |
 
-*(Kolom halaman diisi bersama saat pembagian tugas.)*
-
 ---
 
 ## 2. Peta Proyek
