@@ -1,39 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil - Teras JTI</title>
-</head>
-<body>
-    <header>
-        <h1>Profil</h1>
-        <a class="lonceng" href="#" aria-label="Notifikasi"><svg class="ikon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg></a>
-    </header>
-    <main>
-        <section>
-            <div class="profil-kartu"><span class="foto"><svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><b>Nama Pengguna</b><p>nama@email.com</p></div></div>
-            <ul class="daftar-menu">
-                <li><a href="#"><svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Ubah Profil</span><svg class="ikon" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
-                <li><a href="#"><svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Pusat Bantuan</span><svg class="ikon" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
-                <li><a href="#"><svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Syarat &amp; Ketentuan</span><svg class="ikon" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
-                <li><a class="keluar" href="index.html"><svg class="ikon" viewBox="0 0 24 24"><path d="M9 21H5V3h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg><span>Keluar</span></a></li>
-            </ul>
-        </section>
-    </main>
-    <nav aria-label="Navigasi utama">
-        <ul>
-            <li><a href="dashboard.html">
-                <svg class="ikon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-                Beranda</a></li>
-            <li><a href="riwayat.html">
-                <svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-                Riwayat</a></li>
-            <li><a href="profil.html" class="aktif" aria-current="page">
-                <svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-                Profil</a></li>
-        </ul>
-    </nav>
+  </head>
 
-</body>
+  <body>
+    <header>
+      <h1>Profil</h1>
+      <a class="lonceng" href="#" aria-label="Notifikasi">&#128276;</a>
+    </header>
+
+    <main>
+      <section>
+        <div class="profil-kartu">
+          <span class="foto" aria-hidden="true">&#128100;</span>
+
+          <div>
+            <b>Nama Pengguna</b>
+            <p>nama@email.com</p>
+          </div>
+        </div>
+
+        <ul class="daftar-menu">
+          <li>
+            <a href="#">
+              <span aria-hidden="true">&#128100;</span>
+              <span>Ubah Profil</span>
+              <span aria-hidden="true">&rsaquo;</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true">&#63;</span>
+              <span>Pusat Bantuan</span>
+              <span aria-hidden="true">&rsaquo;</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true">&#9776;</span>
+              <span>Syarat &amp; Ketentuan</span>
+              <span aria-hidden="true">&rsaquo;</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="keluar" href="index.html">
+              <span aria-hidden="true">&#10162;</span>
+              <span>Keluar</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li>
+          <a href="dashboard.html">
+            <span aria-hidden="true">&#8962;</span>
+            Beranda
+          </a>
+        </li>
+
+        <li>
+          <a href="riwayat.html">
+            <span aria-hidden="true">&#8635;</span>
+            Riwayat
+          </a>
+        </li>
+
+        <li>
+          <a href="profil.html" class="aktif" aria-current="page">
+            <span aria-hidden="true">&#128100;</span>
+            Profil
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
 </html>
