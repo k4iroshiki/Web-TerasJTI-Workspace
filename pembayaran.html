@@ -1,110 +1,130 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ketersediaan - Teras JTI</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran DP - Teras JTI</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 700px;
+    }
+    caption {
+      text-align: left;
+      font-weight: bold;
+      padding-bottom: 8px;
+    }
+    th, td {
+      border: 1px solid #999999;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    thead th {
+      background-color: #e6e6e6;
+      color: #000000;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+    tfoot td {
+      font-weight: bold;
+      background-color: #e6e6e6;
+    }
+  </style>
+</head>
+<body>
 
-  <body>
-    <header class="sub">
-      <a class="kembali" href="detail-tempat.html" aria-label="Kembali">&larr;</a>
-      <h1>Ketersediaan</h1>
-    </header>
+  <header>
+    <h1>Pembayaran DP</h1>
+    <p>Teras JTI - Reservasi tempat Jurusan Teknologi Informasi</p>
+  </header>
 
-    <main>
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">Beranda</a></li>
+      <li><a href="riwayat.html">Riwayat</a></li>
+      <li><a href="profil.html">Profil</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <p><a href="reservasi.html">Kembali</a></p>
+
+    <section>
+      <h2>Batas Waktu Pembayaran</h2>
+      <p>Selesaikan pembayaran dalam <strong>23:59:41</strong></p>
+    </section>
+
+    <form action="hasil-reservasi.html">
+
       <section>
-        <div class="kal">
-          <h3>Oktober 2026</h3>
+        <h2>Rincian Biaya</h2>
+        <table>
+          <caption>Rincian Biaya Reservasi Aula Mini</caption>
+          <thead>
+            <tr>
+              <th scope="col">Keterangan</th>
+              <th scope="col">Nominal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Biaya tempat</td>
+              <td>Rp 150.000</td>
+            </tr>
+            <tr>
+              <td>DP</td>
+              <td>Rp 50.000</td>
+            </tr>
+            <tr>
+              <td>Sisa dibayar di tempat</td>
+              <td>Rp 100.000</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Bayar sekarang (DP)</td>
+              <td>Rp 50.000</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
 
-          <table>
-            <caption class="sr-only">
-              Kalender Oktober 2026
-            </caption>
-
-            <thead>
-              <tr>
-                <th>Sen</th>
-                <th>Sel</th>
-                <th>Rab</th>
-                <th>Kam</th>
-                <th>Jum</th>
-                <th>Sab</th>
-                <th>Min</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="hari"><span>1</span></td>
-                <td class="hari"><span>2</span></td>
-                <td class="hari"><span>3</span></td>
-                <td class="hari"><span>4</span></td>
-              </tr>
-              <tr>
-                <td class="hari"><span>5</span></td>
-                <td class="hari"><span>6</span></td>
-                <td class="hari"><span>7</span></td>
-                <td class="hari"><span>8</span></td>
-                <td class="hari"><span>9</span></td>
-                <td class="hari"><span>10</span></td>
-                <td class="hari"><span>11</span></td>
-              </tr>
-              <tr>
-                <td class="hari"><span>12</span></td>
-                <td class="hari"><span>13</span></td>
-                <td class="hari"><span>14</span></td>
-                <td class="hari"><span>15</span></td>
-                <td class="hari"><span>16</span></td>
-                <td class="hari"><span>17</span></td>
-                <td class="hari"><span>18</span></td>
-              </tr>
-              <tr>
-                <td class="hari"><span>19</span></td>
-                <td class="hari"><span>20</span></td>
-                <td class="hari"><span>21</span></td>
-                <td class="hari"><span>22</span></td>
-                <td class="hari"><span>23</span></td>
-                <td class="hari"><span>24</span></td>
-                <td class="hari"><span>25</span></td>
-              </tr>
-              <tr>
-                <td class="ini" aria-current="date"><span>26</span></td>
-                <td><span>27</span></td>
-                <td class="pilih" aria-label="Tanggal terpilih">
-                  <span>28</span>
-                </td>
-                <td><span>29</span></td>
-                <td><span>30</span></td>
-                <td class="hari"><span>31</span></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>Pilih Jam</h2>
-
-        <ul class="slot">
-          <li>08:00</li>
-          <li class="terisi">10:00</li>
-          <li class="dipilih">
-            <span aria-hidden="true">✓</span>
-            13:00
-          </li>
-        </ul>
-
-        <p style="margin: 0; font-size: 12px; color: var(--text-2)">
-          Kosong &middot; Terisi &middot; Dipilih
+      <section>
+        <h2>Metode Pembayaran</h2>
+        <p>
+          <input type="radio" id="metode-bank" name="metode" value="bank" checked>
+          <label for="metode-bank">Transfer Bank (BCA, BNI, Mandiri)</label>
+        </p>
+        <p>
+          <input type="radio" id="metode-qris" name="metode" value="qris">
+          <label for="metode-qris">QRIS (E-Wallet)</label>
         </p>
       </section>
-    </main>
 
-    <div class="aksi">
-      <a class="tombol" href="reservasi.html">Pesan Slot Terpilih</a>
-    </div>
-  </body>
+      <section>
+        <h2>Bukti Pembayaran</h2>
+        <p>
+          <label for="bukti">Unggah bukti pembayaran</label><br>
+          <input type="file" id="bukti" name="bukti" accept="image/png,image/jpeg">
+        </p>
+        <p>JPG atau PNG, maksimal 2 MB</p>
+      </section>
+
+      <p>
+        <button type="submit">Kirim Bukti &amp; Konfirmasi</button>
+      </p>
+
+    </form>
+
+  </main>
+
+  <footer>
+    <p>Teras JTI - Kelompok 4 (NoBugNoCry), Politeknik Negeri Jember, 2026</p>
+    <p>Seluruh data pada halaman ini adalah contoh untuk keperluan tugas.</p>
+  </footer>
+
+</body>
 </html>
