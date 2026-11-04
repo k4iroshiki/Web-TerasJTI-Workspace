@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran DP - Teras JTI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="sub">
+        <a class="kembali" href="reservasi.html" aria-label="Kembali"><svg class="ikon" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></a>
+        <h1>Pembayaran DP</h1>
+    </header>
+    <main>
+        <form id="f" action="hasil.html" style="display:flex;flex-direction:column;gap:16px">
+            <div class="banner"><svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div>Selesaikan pembayaran dalam<strong>23:59:41</strong></div></div>
+            <div class="kartu"><h3>Rincian Biaya</h3><dl><dt>Biaya tempat</dt><dd>Rp 150.000</dd><dt>DP</dt><dd>Rp 50.000</dd><dt>Sisa dibayar di tempat</dt><dd>Rp 100.000</dd></dl>
+            <dl class="total"><dt>Bayar sekarang (DP)</dt><dd style="color:var(--primary)">Rp 50.000</dd></dl></div>
+            <h2>Metode Pembayaran</h2>
+            <label class="metode"><span>Transfer Bank<small>BCA, BNI, Mandiri</small></span><input type="radio" name="metode" value="bank" checked></label>
+            <label class="metode"><span>QRIS<small>E-Wallet</small></span><input type="radio" name="metode" value="qris"></label>
+            <label class="unggah"><svg class="ikon" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 20h16"/></svg><b>Unggah bukti pembayaran</b>JPG atau PNG, maks. 2 MB<input type="file" name="bukti" accept="image/png,image/jpeg"></label>
+        </form>
+    </main>
+    <div class="aksi"><button type="submit" form="f">Kirim Bukti &amp; Konfirmasi</button></div>
+</body>
+</html>
