@@ -520,16 +520,16 @@ Deva memperbarui tabel ini. Status: Belum, Proses, Selesai, Direview.
 
 | File | PIC | Status | Catatan |
 |------|-----|--------|---------|
-| index.html | Firsty | Belum | |
-| registrasi.html | Firsty | Belum | |
-| dashboard.html | Farrel | Belum | |
-| detail-tempat.html | Achmad | Belum | |
-| ketersediaan.html | Achmad | Belum | |
-| reservasi.html | Wildzan | Belum | |
-| hasil-reservasi.html | Wildzan | Belum | |
-| pembayaran-dp.html | Firsty | Belum | |
-| riwayat.html | Deva | Belum | |
-| profil.html | Deva | Belum | |
+| index.html | Firsty | Selesai | |
+| registrasi.html | Firsty | Selesai | |
+| dashboard.html | Farrel | Selesai | |
+| detail-tempat.html | Achmad | Selesai | |
+| ketersediaan.html | Achmad | Selesai | |
+| reservasi.html | Wildzan | Selesai | |
+| hasil-reservasi.html | Wildzan | Selesai | |
+| pembayaran.html | Firsty | Selesai | |
+| riwayat.html | Deva | Selesai | |
+| profil.html | Deva | Selesai | |
 
 ### Definisi selesai untuk satu halaman
 
