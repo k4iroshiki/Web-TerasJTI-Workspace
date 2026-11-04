@@ -1,103 +1,156 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ketersediaan - Teras JTI</title>
+    <title>Jadwal - Teras JTI</title>
   </head>
+
   <body>
     <header class="sub">
-      <a class="kembali" href="detail.html" aria-label="Kembali"
-        ><svg class="ikon" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg
-      ></a>
+      <a class="kembali" href="detail.html" aria-label="Kembali">
+        &larr;
+      </a>
       <h1>Ketersediaan</h1>
     </header>
+
     <main>
-      <section>
-        <div class="kal">
-          <h3>Oktober 2026</h3>
-          <table>
-            <caption class="sr-only">
-              Kalender Oktober 2026
-            </caption>
-            <thead>
-              <tr>
-                <th>Sen</th>
-                <th>Sel</th>
-                <th>Rab</th>
-                <th>Kam</th>
-                <th>Jum</th>
-                <th>Sab</th>
-                <th>Min</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="hari"><span>1</span></td>
-                <td class="hari"><span>2</span></td>
-                <td class="hari"><span>3</span></td>
-                <td class="hari"><span>4</span></td>
-              </tr>
-              <tr>
-                <td class="hari"><span>5</span></td>
-                <td class="hari"><span>6</span></td>
-                <td class="hari"><span>7</span></td>
-                <td class="hari"><span>8</span></td>
-                <td class="hari"><span>9</span></td>
-                <td class="hari"><span>10</span></td>
-                <td class="hari"><span>11</span></td>
-              </tr>
-              <tr>
-                <td class="hari"><span>12</span></td>
-                <td class="hari"><span>13</span></td>
-                <td class="hari"><span>14</span></td>
-                <td class="hari"><span>15</span></td>
-                <td class="hari"><span>16</span></td>
-                <td class="hari"><span>17</span></td>
-                <td class="hari"><span>18</span></td>
-              </tr>
-              <tr>
-                <td class="hari"><span>19</span></td>
-                <td class="hari"><span>20</span></td>
-                <td class="hari"><span>21</span></td>
-                <td class="hari"><span>22</span></td>
-                <td class="hari"><span>23</span></td>
-                <td class="hari"><span>24</span></td>
-                <td class="hari"><span>25</span></td>
-              </tr>
-              <tr>
-                <td class="ini"><span>26</span></td>
-                <td><span>27</span></td>
-                <td class="pilih"><span>28</span></td>
-                <td><span>29</span></td>
-                <td><span>30</span></td>
-                <td class="hari"><span>31</span></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+      <form action="reservasi.html" method="get">
+        <section>
+          <div class="kal">
+            <div>
+              <label for="bulan">Pilih Bulan</label>
+              <select id="bulan" name="bulan">
+                <option value="2026-10" selected>Oktober 2026</option>
+                <option value="2026-11">November 2026</option>
+                <option value="2026-12">Desember 2026</option>
+              </select>
+            </div>
+
+            <table>
+              <caption class="sr-only">
+                Kalender Oktober 2026
+              </caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Sen</th>
+                  <th scope="col">Sel</th>
+                  <th scope="col">Rab</th>
+                  <th scope="col">Kam</th>
+                  <th scope="col">Jum</th>
+                  <th scope="col">Sab</th>
+                  <th scope="col">Min</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-01" class="hari">1</button>
+                  </td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-02" class="hari">2</button>
+                  </td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-03" class="hari">3</button>
+                  </td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-04" class="hari">4</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><button type="button" name="tanggal" value="2026-10-05" class="hari">5</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-06" class="hari">6</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-07" class="hari">7</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-08" class="hari">8</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-09" class="hari">9</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-10" class="hari">10</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-11" class="hari">11</button></td>
+                </tr>
+
+                <tr>
+                  <td><button type="button" name="tanggal" value="2026-10-12" class="hari">12</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-13" class="hari">13</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-14" class="hari">14</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-15" class="hari">15</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-16" class="hari">16</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-17" class="hari">17</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-18" class="hari">18</button></td>
+                </tr>
+
+                <tr>
+                  <td><button type="button" name="tanggal" value="2026-10-19" class="hari">19</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-20" class="hari">20</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-21" class="hari">21</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-22" class="hari">22</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-23" class="hari">23</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-24" class="hari">24</button></td>
+                  <td><button type="button" name="tanggal" value="2026-10-25" class="hari">25</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <button type="button" class="ini" disabled>26</button>
+                  </td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-27" class="hari">27</button>
+                  </td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-28" class="pilih" aria-pressed="true">28</button>
+                  </td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-29" class="hari">29</button>
+                  </td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-30" class="hari">30</button>
+                  </td>
+                  <td>
+                    <button type="button" name="tanggal" value="2026-10-31" class="hari">31</button>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <input type="hidden" name="tanggal" value="2026-10-28" />
+
+          <h2>Pilih Jam</h2>
+
+          <div class="slot">
+            <button type="button" name="jam" value="08:00">
+              08:00
+            </button>
+
+            <button type="button" class="terisi" disabled>
+              10:00
+            </button>
+
+            <button type="button" class="dipilih" aria-pressed="true">
+              <span aria-hidden="true">✓</span>
+              13:00
+            </button>
+          </div>
+
+          <input type="hidden" name="jam" value="13:00" />
+
+          <p style="margin: 0; font-size: 12px; color: var(--text-2)">
+            Kosong &middot; Terisi &middot; Dipilih
+          </p>
+        </section>
+
+        <div class="aksi">
+          <button class="tombol" type="submit">
+            Pesan Slot Terpilih
+          </button>
         </div>
-        <h2>Pilih Jam</h2>
-        <ul class="slot">
-          <li>08:00</li>
-          <li class="terisi">10:00</li>
-          <li class="dipilih">
-            <svg class="ikon sedang" viewBox="0 0 24 24">
-              <path d="M5 12l5 5 9-10" />
-            </svg>
-            13:00
-          </li>
-        </ul>
-        <p style="margin: 0; font-size: 12px; color: var(--text-2)">
-          Kosong &middot; Terisi &middot; Dipilih
-        </p>
-      </section>
+      </form>
     </main>
-    <div class="aksi">
-      <a class="tombol" href="reservasi.html">Pesan Slot Terpilih</a>
-    </div>
   </body>
 </html>
