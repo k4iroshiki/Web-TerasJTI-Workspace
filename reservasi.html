@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi - Teras JTI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="sub">
+        <a class="kembali" href="jadwal.html" aria-label="Kembali"><svg class="ikon" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></a>
+        <h1>Reservasi</h1>
+    </header>
+    <main>
+        <form id="f" action="pembayaran.html" style="display:flex;flex-direction:column;gap:16px">
+            <p><label for="tempat">Tempat</label><input type="text" id="tempat" name="tempat" value="Ruang Diskusi" readonly></p>
+            <p><label for="tanggal">Tanggal</label><input type="text" id="tanggal" name="tanggal" value="Rabu, 28 Okt 2026" readonly></p>
+            <p><label for="mulai">Jam Mulai</label><input type="time" id="mulai" name="mulai" value="13:00"></p>
+            <p><label for="selesai">Jam Selesai</label><input type="time" id="selesai" name="selesai" value="15:00"></p>
+            <p><label for="orang">Jumlah Orang</label><select id="orang" name="orang"><option>1 Orang</option><option>2 Orang</option><option>3 Orang</option><option selected>4 Orang</option><option>5 Orang</option><option>6 Orang</option></select></p>
+        </form>
+    </main>
+    <div class="aksi"><button type="submit" form="f">Kirim Reservasi</button></div>
+</body>
+</html>
