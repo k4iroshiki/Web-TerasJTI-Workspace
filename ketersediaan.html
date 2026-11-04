@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ketersediaan - Teras JTI</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 700px;
+    }
+    caption {
+      text-align: left;
+      font-weight: bold;
+      padding-bottom: 8px;
+    }
+    th, td {
+      border: 1px solid #999999;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    thead th {
+      background-color: #e6e6e6;
+      color: #000000;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ketersediaan</h1>
+    <p>Pilih tanggal dan jam yang masih kosong</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">Beranda</a></li>
+      <li><a href="riwayat.html">Riwayat</a></li>
+      <li><a href="profil.html">Profil</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <p><a href="detail-tempat.html">Kembali</a></p>
+
+    <section>
+      <h2>Ruang Diskusi</h2>
+
+      <form>
+        <p>
+          <label for="tanggal">Pilih Tanggal</label><br>
+          <input type="date" id="tanggal" name="tanggal" value="2026-10-28">
+        </p>
+
+        <h3>Pilih Jam</h3>
+
+        <table>
+          <caption>Slot Jam Rabu, 28 Okt 2026</caption>
+          <thead>
+            <tr>
+              <th scope="col">Jam</th>
+              <th scope="col">Status</th>
+              <th scope="col">Pilih</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08:00</td>
+              <td>Kosong</td>
+              <td>
+                <input type="radio" id="slot-0800" name="slot" value="08:00">
+                <label for="slot-0800">Pilih 08:00</label>
+              </td>
+            </tr>
+            <tr>
+              <td>10:00</td>
+              <td>Terisi</td>
+              <td>
+                <input type="radio" id="slot-1000" name="slot" value="10:00" disabled>
+                <label for="slot-1000">Tidak tersedia</label>
+              </td>
+            </tr>
+            <tr>
+              <td>13:00</td>
+              <td>Kosong</td>
+              <td>
+                <input type="radio" id="slot-1300" name="slot" value="13:00">
+                <label for="slot-1300">Pilih 13:00</label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <h3>Keterangan Status</h3>
+      <ul>
+        <li>Kosong: slot masih bisa dipesan</li>
+        <li>Terisi: slot sudah dipesan orang lain</li>
+        <li>Dipilih: slot yang sedang kamu pilih</li>
+      </ul>
+
+      <p><a href="reservasi.html">Pesan Slot Terpilih</a></p>
+    </section>
+
+    <section>
+      <h2>Contoh Tampilan: Belum Ada Slot Dipilih</h2>
+      <p>Tombol pesan tidak aktif sampai pengguna memilih satu slot kosong.</p>
+      <p><button type="button" disabled>Pesan Slot Terpilih</button></p>
+    </section>
+
+    <section>
+      <h2>Contoh Tampilan: Slot Dipilih</h2>
+      <dl>
+        <dt>Tempat</dt>
+        <dd>Ruang Diskusi</dd>
+        <dt>Tanggal</dt>
+        <dd>Rabu, 28 Okt 2026</dd>
+        <dt>Jam</dt>
+        <dd>13:00</dd>
+        <dt>Status</dt>
+        <dd>Dipilih</dd>
+      </dl>
+      <p><a href="reservasi.html">Pesan Slot Terpilih</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Teras JTI - Kelompok 4 (NoBugNoCry), Politeknik Negeri Jember, 2026</p>
+    <p>Seluruh data pada halaman ini adalah contoh untuk keperluan tugas.</p>
+  </footer>
+
+</body>
+</html>
