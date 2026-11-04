@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Teras JTI</title>
+</head>
+<body>
+
+    <!-- Header: identitas aplikasi + notifikasi -->
+    <header>
+        <h1>Teras JTI</h1>
+        <p><a href="#">Notifikasi</a></p>
+    </header>
+
+    <!-- Navigasi utama (sama di semua halaman) -->
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Beranda</a></li>
+            <li><a href="riwayat.html">Riwayat</a></li>
+            <li><a href="profil.html">Profil</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Pencarian -->
+        <section>
+            <h2>Cari Tempat</h2>
+            <form>
+                <label for="cari">Cari tempat atau ruangan</label><br>
+                <input type="search" id="cari" placeholder="Cari tempat atau ruangan">
+                <button type="submit">Cari</button>
+            </form>
+        </section>
+
+        <!-- Filter jenis tempat -->
+        <section>
+            <h2>Filter</h2>
+            <ul>
+                <li><a href="dashboard.html">Semua</a></li>
+                <li><a href="dashboard.html">Gratis</a></li>
+                <li><a href="dashboard.html">Berbayar (DP)</a></li>
+            </ul>
+        </section>
+
+        <!-- Daftar tempat -->
+        <section>
+            <h2>Tempat Tersedia</h2>
+
+            <article>
+                <figure>
+                    <!-- Ganti dengan: <img src="assets/images/ruang-diskusi.jpg" alt="Foto Ruang Diskusi"> -->
+                    <figcaption>Foto tempat (ganti dengan foto Teras JTI)</figcaption>
+                </figure>
+                <h3>Ruang Diskusi</h3>
+                <p><strong>GRATIS</strong></p>
+                <p>Kapasitas 6 orang</p>
+                <p><a href="jadwal.html">Lihat Jadwal</a></p>
+            </article>
+
+            <article>
+                <figure>
+                    <!-- Ganti dengan: <img src="assets/images/aula-mini.jpg" alt="Foto Aula Mini"> -->
+                    <figcaption>Foto tempat (ganti dengan foto Teras JTI)</figcaption>
+                </figure>
+                <h3>Aula Mini</h3>
+                <p><strong>DP Rp 50.000</strong></p>
+                <p>Kapasitas 6 orang</p>
+                <p><a href="jadwal.html">Lihat Jadwal</a></p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2026 Teras JTI - Politeknik Negeri Jember</p>
+    </footer>
+
+</body>
+</html>
