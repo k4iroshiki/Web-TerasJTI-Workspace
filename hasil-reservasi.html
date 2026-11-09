@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hasil Reservasi - Teras JTI</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components/button.css">
+  <link rel="stylesheet" href="assets/css/components/card.css">
+  <link rel="stylesheet" href="assets/css/components/form.css">
+  <link rel="stylesheet" href="assets/css/components/status.css">
+  <link rel="stylesheet" href="assets/css/components/table.css">
 </head>
 <body>
 
@@ -24,8 +31,7 @@
 
     <section>
       <h2>Contoh Tampilan: Reservasi Terkonfirmasi (Tempat Gratis)</h2>
-      <p><strong>Reservasi Terkonfirmasi</strong></p>
-      <p>Tempat berhasil dipesan. Reservasimu sudah terkonfirmasi.</p>
+      <div class="banner banner-sukses"><p><strong>Reservasi Terkonfirmasi</strong></p><p>Tempat berhasil dipesan. Reservasimu sudah terkonfirmasi.</p></div>
 
       <dl>
         <dt>Tempat</dt>
@@ -48,8 +54,7 @@
 
     <section>
       <h2>Contoh Tampilan: Menunggu Pembayaran (Tempat Berbayar)</h2>
-      <p><strong>Reservasi Tercatat</strong></p>
-      <p>Selesaikan pembayaran DP agar reservasimu terkonfirmasi. Jadwal ditahan sementara.</p>
+      <div class="banner banner-menunggu"><p><strong>Reservasi Tercatat</strong></p><p>Selesaikan pembayaran DP agar reservasimu terkonfirmasi. Jadwal ditahan sementara.</p></div>
 
       <dl>
         <dt>Tempat</dt>
@@ -67,15 +72,14 @@
       </dl>
 
       <ul>
-        <li><a href="pembayaran.html">Bayar DP Sekarang</a></li>
+        <li><a class="tombol" href="pembayaran.html">Bayar DP Sekarang</a></li>
         <li><a href="riwayat.html">Lihat Riwayat</a></li>
       </ul>
     </section>
 
     <section>
       <h2>Contoh Tampilan: DP Lunas (Reservasi Berhasil)</h2>
-      <p><strong>Reservasi Berhasil</strong></p>
-      <p>Pembayaran DP diterima. Reservasimu sudah terkonfirmasi.</p>
+      <div class="banner banner-sukses"><p><strong>Reservasi Berhasil</strong></p><p>Pembayaran DP diterima. Reservasimu sudah terkonfirmasi.</p></div>
 
       <dl>
         <dt>Tempat</dt>

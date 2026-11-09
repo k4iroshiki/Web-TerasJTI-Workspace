@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - Teras JTI</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components/button.css">
+  <link rel="stylesheet" href="assets/css/components/card.css">
+  <link rel="stylesheet" href="assets/css/components/form.css">
+  <link rel="stylesheet" href="assets/css/components/status.css">
+  <link rel="stylesheet" href="assets/css/components/table.css">
 </head>
 <body>
     <header>
@@ -29,7 +36,7 @@
         </section>
         <section>
             <h2>Filter</h2>
-            <ul>
+            <ul class="chip-list">
                 <li><a href="dashboard.html">Semua</a></li>
                 <li><a href="dashboard.html">Gratis</a></li>
                 <li><a href="dashboard.html">Berbayar (DP)</a></li>
@@ -40,24 +47,24 @@
 
             <article>
                 <figure>
-                    <img src="assets/tempat.jpeg" alt="Foto Ruang Diskusi Teras JTI" width="320" height="180">
+                    <img src="assets/images/tempat.jpeg" alt="Foto Ruang Diskusi Teras JTI" width="320" height="180">
                     <figcaption>Foto Ruang Diskusi</figcaption>
                 </figure>
                 <h3>Ruang Diskusi</h3>
-                <p><strong>GRATIS</strong></p>
+                <p><strong class="label label-gratis">GRATIS</strong></p>
                 <p>Kapasitas 6 orang</p>
-                <p><a href="detail-tempat.html">Lihat Jadwal</a></p>
+                <p><a class="tombol" href="detail-tempat.html">Lihat Jadwal</a></p>
             </article>
 
             <article>
                 <figure>
-                    <img src="assets/aulamini.webp" alt="Foto Aula Mini Teras JTI" width="320" height="186">
+                    <img src="assets/images/aulamini.webp" alt="Foto Aula Mini Teras JTI" width="320" height="186">
                     <figcaption>Foto Aula Mini</figcaption>
                 </figure>
                 <h3>Aula Mini</h3>
-                <p><strong>DP Rp 50.000</strong></p>
+                <p><strong class="label label-dp">DP Rp 50.000</strong></p>
                 <p>Kapasitas 8 orang</p>
-                <p><a href="detail-tempat.html">Lihat Jadwal</a></p>
+                <p><a class="tombol" href="detail-tempat.html">Lihat Jadwal</a></p>
             </article>
         </section>
     </main>
