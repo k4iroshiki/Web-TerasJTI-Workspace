@@ -1,0 +1,59 @@
+button,
+.tombol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 2px solid var(--biru);
+  border-radius: var(--radius);
+  background: var(--biru);
+  color: #ffffff;
+  font: inherit;
+  font-size: .9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .15s, border-color .15s;
+}
+
+button:hover:not(:disabled),
+.tombol:hover {
+  background: var(--biru-tua);
+  border-color: var(--biru-tua);
+  color: #ffffff;
+}
+
+button:disabled {
+  background: var(--abu-muda);
+  border-color: var(--abu-muda);
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.tombol-sekunder {
+  background: var(--kartu);
+  color: var(--biru);
+}
+
+.tombol-sekunder:hover {
+  background: var(--biru-muda);
+  border-color: var(--biru);
+  color: var(--biru-tua);
+}
+
+.tombol-bahaya {
+  background: var(--merah);
+  border-color: var(--merah);
+}
+
+.tombol-bahaya:hover {
+  background: #991b1b;
+  border-color: #991b1b;
+}
+
+form p > button,
+.aksi button {
+  width: 100%;
+}

@@ -1,0 +1,159 @@
+main > section:has(> article) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+main > section:has(> article) > :not(article) {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: var(--radius-besar);
+}
+
+article figure {
+  margin: 0;
+}
+
+article img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+figure {
+  margin: 0 0 16px;
+}
+
+figcaption {
+  margin-top: 6px;
+  color: var(--abu);
+  font-size: .75rem;
+}
+
+article h3 {
+  margin: 4px 0 0;
+}
+
+article p {
+  margin: 0;
+}
+
+article > p:last-child {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+article .tombol {
+  display: flex;
+  width: 100%;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip-list li {
+  margin: 0;
+}
+
+.chip-list a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--garis);
+  border-radius: 999px;
+  color: var(--teks);
+  font-size: .875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.chip-list a:hover {
+  border-color: var(--biru);
+  color: var(--biru);
+}
+
+.profil-kartu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--garis);
+}
+
+.profil-kartu p {
+  margin: 0;
+  color: var(--abu);
+}
+
+.profil-kartu b {
+  font-family: var(--font-judul);
+  font-size: 1.125rem;
+}
+
+.foto {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--biru-muda);
+  font-size: 1.5rem;
+}
+
+.daftar-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.daftar-menu li {
+  margin: 0;
+}
+
+.daftar-menu li + li {
+  border-top: 1px solid var(--garis);
+}
+
+.daftar-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  color: var(--teks);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.daftar-menu a:hover {
+  color: var(--biru);
+}
+
+.daftar-menu a span:nth-child(2) {
+  flex: 1;
+}
+
+.daftar-menu a span:last-child {
+  color: var(--abu);
+}
+
+.daftar-menu .keluar,
+.daftar-menu .keluar span:last-child {
+  color: var(--merah);
+}

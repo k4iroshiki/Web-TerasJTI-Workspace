@@ -1,0 +1,67 @@
+.label {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--biru-muda);
+  color: var(--biru-tua);
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.label-gratis,
+.label-sukses {
+  background: var(--hijau-muda);
+  color: var(--hijau);
+}
+
+.label-dp,
+.label-menunggu {
+  background: var(--amber-muda);
+  color: var(--amber);
+}
+
+.label-gagal {
+  background: var(--merah-muda);
+  color: var(--merah);
+}
+
+.label-selesai {
+  background: var(--abu-muda);
+  color: var(--abu);
+}
+
+.banner {
+  margin-bottom: 16px;
+  padding: 16px;
+  border-left: 4px solid var(--biru);
+  border-radius: var(--radius);
+  background: var(--biru-muda);
+  color: var(--biru-tua);
+}
+
+.banner p {
+  margin: 0;
+}
+
+.banner p + p {
+  margin-top: 4px;
+}
+
+.banner-sukses {
+  border-left-color: var(--hijau);
+  background: var(--hijau-muda);
+  color: #14532d;
+}
+
+.banner-menunggu {
+  border-left-color: var(--amber);
+  background: var(--amber-muda);
+  color: var(--amber);
+}
+
+.banner-gagal {
+  border-left-color: var(--merah);
+  background: var(--merah-muda);
+  color: #7f1d1d;
+}

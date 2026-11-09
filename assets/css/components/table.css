@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+  margin: 0 0 8px;
+  border-collapse: collapse;
+  font-size: .9375rem;
+}
+
+caption {
+  padding-bottom: 8px;
+  color: var(--teks);
+  font-weight: 600;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border: 1px solid var(--garis);
+  text-align: left;
+  vertical-align: middle;
+}
+
+thead th {
+  background: var(--biru-muda);
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--latar);
+}
+
+tfoot td {
+  background: var(--biru-muda);
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+td label {
+  margin: 0;
+}
