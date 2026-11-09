@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat/Montserrat-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --biru: #1d4ed8;
+  --biru-tua: #1e40af;
+  --biru-muda: #dbeafe;
+  --hijau: #15803d;
+  --hijau-muda: #dcfce7;
+  --amber: #92400e;
+  --amber-muda: #fef3c7;
+  --merah: #b91c1c;
+  --merah-muda: #fee2e2;
+  --abu: #4b5563;
+  --abu-muda: #e5e7eb;
+  --teks: #111827;
+  --garis: #d1d5db;
+  --latar: #f8fafc;
+  --kartu: #ffffff;
+  --radius: 8px;
+  --radius-besar: 12px;
+  --lebar: 960px;
+  --gutter: max(16px, calc((100% - var(--lebar)) / 2 + 16px));
+  --font-isi: "Poppins", Arial, sans-serif;
+  --font-judul: "Montserrat", "Poppins", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-isi);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--teks);
+  background: var(--latar);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-judul);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--teks);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+h3 {
+  margin: 20px 0 8px;
+  font-size: 1.0625rem;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+a {
+  color: var(--biru);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--biru-tua);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  margin: 0 0 12px;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 24px;
+  margin: 0 0 12px;
+}
+
+dt {
+  color: var(--abu);
+  font-size: .875rem;
+}
+
+dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 600;
+}
+
+:focus-visible {
+  outline: 2px solid var(--biru);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,258 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  padding: 20px var(--gutter);
+  background: var(--biru);
+  color: #ffffff;
+}
+
+header h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: var(--biru-muda);
+}
+
+header a {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+header img {
+  margin: 0 0 12px;
+  border-radius: var(--radius);
+}
+
+header.sub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+header.sub h1 {
+  font-size: 1.25rem;
+}
+
+header .kembali {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+header .kembali:hover {
+  background: rgba(255, 255, 255, .15);
+  color: #ffffff;
+}
+
+.lonceng {
+  position: absolute;
+  top: 50%;
+  right: var(--gutter);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transform: translateY(-50%);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--kartu);
+  border-bottom: 1px solid var(--garis);
+}
+
+nav ul {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0 var(--gutter);
+  list-style: none;
+  overflow-x: auto;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 14px 16px;
+  border-bottom: 3px solid transparent;
+  color: var(--abu);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav a:hover,
+nav a[aria-current="page"],
+nav a.aktif {
+  color: var(--biru);
+}
+
+nav a[aria-current="page"],
+nav a.aktif {
+  border-bottom-color: var(--biru);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--lebar);
+  margin: 0 auto;
+  padding: 24px 16px 32px;
+}
+
+main > p:first-child {
+  margin: 0 0 8px;
+}
+
+main .kembali {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+main .kembali::before {
+  content: "\2190";
+}
+
+main > section {
+  margin-bottom: 16px;
+  padding: 24px;
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: var(--radius-besar);
+}
+
+main > section > :last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 24px var(--gutter);
+  background: var(--kartu);
+  border-top: 1px solid var(--garis);
+  color: var(--abu);
+  font-size: .875rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 0 4px;
+}
+
+main + nav {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  border-top: 1px solid var(--garis);
+  border-bottom: 0;
+}
+
+main + nav ul {
+  justify-content: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+main + nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 72px;
+  padding: 8px 12px 10px;
+  border-top: 3px solid transparent;
+  border-bottom: 0;
+  font-size: .75rem;
+}
+
+main + nav a span {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+main + nav a[aria-current="page"],
+main + nav a.aktif {
+  border-top-color: var(--biru);
+  border-bottom-color: transparent;
+}
+
+body:has(main + nav) {
+  padding-bottom: 76px;
+}
+
+.aksi {
+  position: sticky;
+  bottom: 0;
+  padding: 16px var(--gutter);
+  background: var(--kartu);
+  border-top: 1px solid var(--garis);
+}
+
+.auth header {
+  padding-top: 48px;
+  background: transparent;
+  color: var(--teks);
+  text-align: center;
+}
+
+.auth header h1 {
+  color: var(--biru);
+}
+
+.auth header p {
+  color: var(--abu);
+}
+
+.auth header img {
+  margin: 0 auto 12px;
+}
+
+.auth main {
+  max-width: 440px;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 16px 16px 24px;
+  }
+
+  main > section {
+    padding: 16px;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  dd {
+    margin-bottom: 10px;
+  }
+}
