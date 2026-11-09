@@ -8,8 +8,6 @@ Repo ini berisi website statis (HTML saja) yang dibuat dari prototype Figma apli
 Catatan penting:
 - Semua data di website ini adalah data contoh (fiktif). Jangan memasukkan data pribadi asli, password asli, atau bukti pembayaran asli.
 - Form Login, Registrasi, dan Pembayaran hanya berupa tampilan. Belum ada proses login atau pembayaran.
-- Tampilan belum akan sama persis dengan Figma karena CSS belum dipelajari. Perbedaan itu dicatat, bukan dianggap kesalahan.
-
 ---
 
 ## Daftar Isi
